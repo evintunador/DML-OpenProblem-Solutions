@@ -3,7 +3,7 @@ Problem source:
 https://www.deep-ml.com/problem/Single%20Neuron%20with%20Backpropagation
 
 YouTube video:
-
+https://youtu.be/LPfsTFcFqU4
 '''
 
 import numpy as np
