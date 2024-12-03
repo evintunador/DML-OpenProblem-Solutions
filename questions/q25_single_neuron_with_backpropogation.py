@@ -26,8 +26,8 @@ def train_neuron(x: np.ndarray, labels: np.ndarray, weights: np.ndarray, bias: f
 		dL_dp = (2 / n) * (probabilities - labels) # (1) * ((n) - (n)) -> (n)
 		dp_dz = sigmoid(z) * (1 - sigmoid(z)) # (n) -> (n)
 		dL_dz = dL_dp * dp_dz # (n) * (n) -> (n)
-		dz_db = sum(z) # (n) -> (1)
-		dL_db = sum(dL_dz * dz_db) # (1)
+		dz_db = z # (n)
+		dL_db = sum(dL_dz * dz_db) # sum[(n) + (n)] -> (1)
 		dz_dw = x # (n,d)
 		dL_dw = dL_dz @ dz_dw # (n) * (n,d) -> (d)
 			
